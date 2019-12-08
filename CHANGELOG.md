@@ -1,3 +1,9 @@
+## 9 December 2019
+
+### [1.0.0](https://github.com/idiocc/cors/compare/v0.0.0-pre...v1.0.0)
+
+- [package] Publish `v1` with source and test.
+
 ## 8 December 2019
 
 ### 0.0.0-pre
