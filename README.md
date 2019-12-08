@@ -38,17 +38,90 @@ Cross-Origin Resource Sharing (CORS) For Goa.
  - <kbd>config</kbd> <em><code><a href="#type-corsconfig" title="Options for the program.">!CorsConfig</a></code></em> (optional): The config.
 
 __<a name="type-corsconfig">`CorsConfig`</a>__: Options for the program.
-
-
-|        Name        |                                                                              Type                                                                              |                                       Description                                        |             Default              |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------- |
-| origin             | <em>(string \| function(<a href="https://github.com/idiocc/goa/wiki/Context#type-_goacontext" title="The context object for each request.">!Context</a>))</em> | `Access-Control-Allow-Origin` header, default is taken from the `Origin` request header. | -                                |
-| allowMethods       | <em>(string \| !Array&lt;string&gt;)</em>                                                                                                                      | `Access-Control-Allow-Methods` header.                                                   | `GET,HEAD,PUT,POST,DELETE,PATCH` |
-| exposeHeaders      | <em>(string \| !Array&lt;string&gt;)</em>                                                                                                                      | `Access-Control-Expose-Headers` header.                                                  | -                                |
-| allowHeaders       | <em>(string \| !Array&lt;string&gt;)</em>                                                                                                                      | `Access-Control-Allow-Headers` header.                                                   | -                                |
-| maxAge             | <em>(string \| number)</em>                                                                                                                                    | `Access-Control-Max-Age` header in seconds.                                              | -                                |
-| credentials        | <em>boolean</em>                                                                                                                                               | `Access-Control-Max-Age` header in seconds.                                              | `false`                          |
-| keepHeadersOnError | <em>boolean</em>                                                                                                                                               | Add set headers to `err.header` if an error is thrown.                                   | `true`                           |
+<table>
+ <thead><tr>
+  <th>Name</th>
+  <th>Type &amp; Description</th>
+  <th>Default</th>
+ </tr></thead>
+ <tr>
+  <td rowSpan="3" align="center">origin</td>
+  <td><em>(string | function(<a href="https://github.com/idiocc/goa/wiki/Context#type-_goacontext" title="The context object for each request.">!Context</a>))</em></td>
+  <td rowSpan="3">-</td>
+ </tr>
+ <tr></tr>
+ <tr>
+  <td>
+   <code>Access-Control-Allow-Origin</code> header, default is taken from the <code>Origin</code> request header.
+  </td>
+ </tr>
+ <tr>
+  <td rowSpan="3" align="center">allowMethods</td>
+  <td><em>(string | !Array&lt;string&gt;)</em></td>
+  <td rowSpan="3"><code>GET,HEAD,PUT,POST,DELETE,PATCH</code></td>
+ </tr>
+ <tr></tr>
+ <tr>
+  <td>
+   <code>Access-Control-Allow-Methods</code> header.
+  </td>
+ </tr>
+ <tr>
+  <td rowSpan="3" align="center">exposeHeaders</td>
+  <td><em>(string | !Array&lt;string&gt;)</em></td>
+  <td rowSpan="3">-</td>
+ </tr>
+ <tr></tr>
+ <tr>
+  <td>
+   <code>Access-Control-Expose-Headers</code> header.
+  </td>
+ </tr>
+ <tr>
+  <td rowSpan="3" align="center">allowHeaders</td>
+  <td><em>(string | !Array&lt;string&gt;)</em></td>
+  <td rowSpan="3">-</td>
+ </tr>
+ <tr></tr>
+ <tr>
+  <td>
+   <code>Access-Control-Allow-Headers</code> header.
+  </td>
+ </tr>
+ <tr>
+  <td rowSpan="3" align="center">maxAge</td>
+  <td><em>(string | number)</em></td>
+  <td rowSpan="3">-</td>
+ </tr>
+ <tr></tr>
+ <tr>
+  <td>
+   <code>Access-Control-Max-Age</code> header in seconds.
+  </td>
+ </tr>
+ <tr>
+  <td rowSpan="3" align="center">credentials</td>
+  <td><em>boolean</em></td>
+  <td rowSpan="3"><code>false</code></td>
+ </tr>
+ <tr></tr>
+ <tr>
+  <td>
+   <code>Access-Control-Max-Age</code> header in seconds.
+  </td>
+ </tr>
+ <tr>
+  <td rowSpan="3" align="center">keepHeadersOnError</td>
+  <td><em>boolean</em></td>
+  <td rowSpan="3"><code>true</code></td>
+ </tr>
+ <tr></tr>
+ <tr>
+  <td>
+   Add set headers to <code>err.header</code> if an error is thrown.
+  </td>
+ </tr>
+</table>
 
 There are 3 main use cases:
 

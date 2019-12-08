@@ -10,7 +10,7 @@ import cors from '@goa/cors'
 
 <typedef method="cors">types/api.xml</typedef>
 
-<typedef>types/index.xml</typedef>
+<typedef narrow flatten>types/index.xml</typedef>
 
 There are 3 main use cases:
 
