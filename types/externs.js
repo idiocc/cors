@@ -13,7 +13,7 @@ var _goa = {}
 _goa.CorsConfig
 /**
  * `Access-Control-Allow-Origin` header, default is taken from the `Origin` request header.
- * @type {string|function(!_goa.Context)}
+ * @type {(string|function(!_goa.Context))|undefined}
  */
 _goa.CorsConfig.prototype.origin
 /**

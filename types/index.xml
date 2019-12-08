@@ -1,6 +1,6 @@
 <types namespace="_goa">
   <type record name="CorsConfig" desc="Options for the program.">
-    <prop type="string|function(!_goa.Context)" name="origin">
+    <prop type="string|function(!_goa.Context)" name="origin" opt>
       `Access-Control-Allow-Origin` header, default is taken from the `Origin` request header.
     </prop>
     <prop type="string|!Array<string>" name="allowMethods" default="GET,HEAD,PUT,POST,DELETE,PATCH">
