@@ -93,8 +93,8 @@ export default function (config = {}) {
 
       ctx.set('Access-Control-Allow-Origin', origin)
 
-      if (credentials === true)
-        ctx.set('Access-Control-Allow-Credentials', 'true')
+      if (credentials)
+        ctx.set('Access-Control-Allow-Credentials', true)
 
       if (maxAge)
         ctx.set('Access-Control-Max-Age', maxAge)

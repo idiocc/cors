@@ -12,8 +12,8 @@
     "lib": "depack src/depack.js -o compile/cors.js -a -c --source_map_include_content --externs http",
     "test-compile": "ALAMODE_ENV=test-compile yarn test",
     "lint": "eslint .",
-    "doc": "NODE_DEBUG=doc doc -o README.md -n _cors",
-    "wiki": "NODE_DEBUG=doc doc documentary-wiki -W wiki -n _cors",
+    "doc": "NODE_DEBUG=doc doc -o README.md -n _goa",
+    "wiki": "NODE_DEBUG=doc doc documentary-wiki -W wiki -n _goa",
     "d": "yarn-s template d1 externs",
     "d1": "typal compile/index.js -u -t types/index.xml",
     "template": "typal compile/template.js -T compile/index.js -t types/api.xml",
@@ -43,6 +43,7 @@
   "homepage": "https://github.com/idiocc/cors#readme",
   "devDependencies": {
     "@externs/goa": "^0.1.1",
+    "@goa/koa": "^1.1.5",
     "@goa/vary": "^1.0.0",
     "@typedefs/goa": "^0.0.6",
     "alamode": "^3.2.0",
@@ -50,6 +51,7 @@
     "documentary": "^1.34.2",
     "erte": "^1.2.0",
     "eslint-config-artdeco": "1.0.1",
+    "rqt": "^4.0.0",
     "yarn-s": "1.2.1",
     "zoroaster": "^4.1.2"
   }

@@ -17,6 +17,13 @@
   resolved "https://registry.yarnpkg.com/@externs/nodejs/-/nodejs-1.5.0.tgz#88ff9e7a03c53d19101ee49768e598ff0f39c9ad"
   integrity sha512-2J+FRDjGfKKldTQ5YqLmhQ04/sA9swTQ6OTtPzo4xhg41u1+eiufciXiqW6u3UXEcmm413a27NakgnLbzfp0wQ==
 
+"@goa/koa@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@goa/koa/-/koa-1.1.5.tgz#5206607d49c0b23a97355a5a089040fa5bdd0e73"
+  integrity sha512-GE2PbI3Cda0vJAHlo5wAU3lD5qE7CQqqiITrmmx0YQmIPqzJlj7K9m1LR8RDi4Ax6775uQ2TO/mQDvcgmxGtXw==
+  dependencies:
+    mime-db "^1.42.0"
+
 "@goa/vary@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@goa/vary/-/vary-1.0.0.tgz#0170115ee3b61d836bc4013f9a03794690e2fbe5"
@@ -69,10 +76,20 @@ eslint-config-artdeco@1.0.1:
   resolved "https://registry.yarnpkg.com/eslint-config-artdeco/-/eslint-config-artdeco-1.0.1.tgz#4451c9d0ed1ce4d33dfd43a6315f12c8bfb04274"
   integrity sha1-RFHJ0O0c5NM9/UOmMV8SyL+wQnQ=
 
+mime-db@^1.42.0:
+  version "1.42.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.42.0.tgz#3e252907b4c7adb906597b4b65636272cf9e7bac"
+  integrity sha512-UbfJCR4UAVRNgMpfImz05smAXK7+c+ZntjaA26ANtkXLlOe947Aag5zdIcKQULAiF9Cq4WxBi9jUs5zkA84bYQ==
+
 preact@8.5.3:
   version "8.5.3"
   resolved "https://registry.yarnpkg.com/preact/-/preact-8.5.3.tgz#78c2a5562fcecb1fed1d0055fa4ac1e27bde17c1"
   integrity sha512-O3kKP+1YdgqHOFsZF2a9JVdtqD+RPzCQc3rP+Ualf7V6rmRDchZ9MJbiGTT7LuyqFKZqlHSOyO/oMFmI2lVTsw==
+
+rqt@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/rqt/-/rqt-4.0.0.tgz#b57f64bf1b3b8b8109617f9dc67b9dd9ea5cb4d6"
+  integrity sha512-DUm6ZAt6ESeY46aFWhQwBvsOpXABRL5TTkpN/3KJjog7uk2ncYuU4UZ8FQV6qfWybihkMFCdoESNSxYQ5rSZiQ==
 
 typal@^1.22.9:
   version "1.22.9"
