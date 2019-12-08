@@ -1,6 +1,6 @@
-<types namespace="_myNewPackage">
-  <method name="myNewPackage" async return="string">
-    <arg type="!_myNewPackage.Config" name="config">The config.</arg>
-    {{ description }}
+<types namespace="_cors">
+  <method name="cors" async return="string">
+    <arg type="!_cors.Config" name="config">The config.</arg>
+    Cross-Origin Resource Sharing (CORS) For Goa.
   </method>
 </types>

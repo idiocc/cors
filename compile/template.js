@@ -1,10 +1,10 @@
-const { _myNewPackage } = require('./mnp')
+const { _cors } = require('./cors')
 
 /**
- * @methodType {_myNewPackage.myNewPackage}
+ * @methodType {_cors.cors}
  */
 function myNewPackge(config) {
-  return _myNewPackage(config)
+  return _cors(config)
 }
 
 module.exports = myNewPackge

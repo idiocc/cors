@@ -1,1 +1,1 @@
-{{ description }}
+Cross-Origin Resource Sharing (CORS) For Goa.

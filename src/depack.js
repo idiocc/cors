@@ -1,6 +1,6 @@
 import '../types/externs'
-import myNewPackage from './'
+import cors from './'
 
 module.exports = {
-  '_myNewPackage': myNewPackage,
+  '_cors': cors,
 }

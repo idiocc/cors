@@ -1,7 +1,7 @@
-import myNewPackage from '../src'
+import cors from '../src'
 
 (async () => {
-  const res = await myNewPackage({
+  const res = await cors({
     text: 'example',
   })
   console.log(res)

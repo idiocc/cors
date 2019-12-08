@@ -1,11 +1,11 @@
-# my-new-package
+# @goa/cors
 
-%NPM: my-new-package%
+%NPM: @goa/cors%
 
-`my-new-package` is {{ description }}
+`@goa/cors` is Cross-Origin Resource Sharing (CORS) For Goa.
 
 ```sh
-yarn add my-new-package
+yarn add @goa/cors
 ```
 
 ## Table Of Contents
