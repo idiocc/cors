@@ -1,6 +1,6 @@
-<types namespace="_cors">
+<types namespace="_goa">
   <method name="cors" async return="string">
-    <arg type="!_cors.Config" name="config">The config.</arg>
+    <arg type="!_goa.CorsConfig" name="config" opt>The config.</arg>
     Cross-Origin Resource Sharing (CORS) For Goa.
   </method>
 </types>

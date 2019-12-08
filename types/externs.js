@@ -5,19 +5,44 @@
 
 /* typal types/index.xml externs */
 /** @const */
-var _cors = {}
+var _goa = {}
 /**
  * Options for the program.
  * @record
  */
-_cors.Config
+_goa.CorsConfig
 /**
- * A boolean option. Default `true`.
+ * `Access-Control-Allow-Origin` header, default is taken from the `Origin` request header.
+ * @type {string|function(!_goa.Context)}
+ */
+_goa.CorsConfig.prototype.origin
+/**
+ * `Access-Control-Allow-Methods` header. Default `GET,HEAD,PUT,POST,DELETE,PATCH`.
+ * @type {(string|!Array<string>)|undefined}
+ */
+_goa.CorsConfig.prototype.allowMethods
+/**
+ * `Access-Control-Expose-Headers` header.
+ * @type {(string|!Array<string>)|undefined}
+ */
+_goa.CorsConfig.prototype.exposeHeaders
+/**
+ * `Access-Control-Allow-Headers` header.
+ * @type {(string|!Array<string>)|undefined}
+ */
+_goa.CorsConfig.prototype.allowHeaders
+/**
+ * `Access-Control-Max-Age` header in seconds.
+ * @type {(string|number)|undefined}
+ */
+_goa.CorsConfig.prototype.maxAge
+/**
+ * `Access-Control-Max-Age` header in seconds. Default `false`.
  * @type {boolean|undefined}
  */
-_cors.Config.prototype.shouldRun
+_goa.CorsConfig.prototype.credentials
 /**
- * A text to return.
- * @type {string|undefined}
+ * Add set headers to `err.header` if an error is thrown. Default `true`.
+ * @type {boolean|undefined}
  */
-_cors.Config.prototype.text
+_goa.CorsConfig.prototype.keepHeadersOnError

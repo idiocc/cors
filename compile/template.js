@@ -1,12 +1,17 @@
 const { _cors } = require('./cors')
 
 /**
- * @methodType {_cors.cors}
+ * @methodType {_goa.cors}
  */
-function myNewPackge(config) {
+function cors(config) {
   return _cors(config)
 }
 
-module.exports = myNewPackge
+module.exports = cors
 
 /* typal types/index.xml namespace */
+
+/**
+ * @suppress {nonStandardJsDocs}
+ * @typedef {import('@typedefs/goa').Context} _goa.Context
+ */

@@ -1,10 +1,25 @@
-<types namespace="_cors">
-  <type record name="Config" desc="Options for the program.">
-    <prop boolean name="shouldRun" default="true">
-      A boolean option.
+<types namespace="_goa">
+  <type record name="CorsConfig" desc="Options for the program.">
+    <prop type="string|function(!_goa.Context)" name="origin">
+      `Access-Control-Allow-Origin` header, default is taken from the `Origin` request header.
     </prop>
-    <prop string name="text" opt>
-      A text to return.
+    <prop type="string|!Array<string>" name="allowMethods" default="GET,HEAD,PUT,POST,DELETE,PATCH">
+      `Access-Control-Allow-Methods` header.
+    </prop>
+    <prop type="string|!Array<string>" name="exposeHeaders" opt>
+      `Access-Control-Expose-Headers` header.
+    </prop>
+    <prop type="string|!Array<string>" name="allowHeaders" opt>
+      `Access-Control-Allow-Headers` header.
+    </prop>
+    <prop type="string|number" name="maxAge" opt>
+      `Access-Control-Max-Age` header in seconds.
+    </prop>
+    <prop boolean name="credentials" default="false">
+      `Access-Control-Max-Age` header in seconds.
+    </prop>
+    <prop boolean name="keepHeadersOnError" default="true">
+      Add set headers to `err.header` if an error is thrown.
     </prop>
   </type>
 </types>
