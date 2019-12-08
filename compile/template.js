@@ -10,8 +10,3 @@ function cors(config) {
 module.exports = cors
 
 /* typal types/index.xml namespace */
-
-/**
- * @suppress {nonStandardJsDocs}
- * @typedef {import('@typedefs/goa').Context} _goa.Context
- */

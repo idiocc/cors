@@ -20,6 +20,7 @@ module.exports = cors
 
 /* typal types/index.xml namespace */
 /**
+ * @typedef {import('@typedefs/goa').Context} _goa.Context
  * @typedef {_goa.CorsConfig} CorsConfig `＠record` Options for the program.
  * @typedef {Object} _goa.CorsConfig `＠record` Options for the program.
  * @prop {string|function(!_goa.Context)} [origin] `Access-Control-Allow-Origin` header, default is taken from the `Origin` request header.
@@ -29,9 +30,4 @@ module.exports = cors
  * @prop {string|number} [maxAge] `Access-Control-Max-Age` header in seconds.
  * @prop {boolean} [credentials=false] `Access-Control-Max-Age` header in seconds. Default `false`.
  * @prop {boolean} [keepHeadersOnError=true] Add set headers to `err.header` if an error is thrown. Default `true`.
- */
-
-/**
- * @suppress {nonStandardJsDocs}
- * @typedef {import('@typedefs/goa').Context} _goa.Context
  */

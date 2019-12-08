@@ -40,15 +40,15 @@ Cross-Origin Resource Sharing (CORS) For Goa.
 __<a name="type-corsconfig">`CorsConfig`</a>__: Options for the program.
 
 
-|        Name        |                   Type                    |                                       Description                                        |             Default              |
-| ------------------ | ----------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------- |
-| origin             | <em>(string \| function(!Context))</em>   | `Access-Control-Allow-Origin` header, default is taken from the `Origin` request header. | -                                |
-| allowMethods       | <em>(string \| !Array&lt;string&gt;)</em> | `Access-Control-Allow-Methods` header.                                                   | `GET,HEAD,PUT,POST,DELETE,PATCH` |
-| exposeHeaders      | <em>(string \| !Array&lt;string&gt;)</em> | `Access-Control-Expose-Headers` header.                                                  | -                                |
-| allowHeaders       | <em>(string \| !Array&lt;string&gt;)</em> | `Access-Control-Allow-Headers` header.                                                   | -                                |
-| maxAge             | <em>(string \| number)</em>               | `Access-Control-Max-Age` header in seconds.                                              | -                                |
-| credentials        | <em>boolean</em>                          | `Access-Control-Max-Age` header in seconds.                                              | `false`                          |
-| keepHeadersOnError | <em>boolean</em>                          | Add set headers to `err.header` if an error is thrown.                                   | `true`                           |
+|        Name        |                                                                              Type                                                                              |                                       Description                                        |             Default              |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------- |
+| origin             | <em>(string \| function(<a href="https://github.com/idiocc/goa/wiki/Context#type-_goacontext" title="The context object for each request.">!Context</a>))</em> | `Access-Control-Allow-Origin` header, default is taken from the `Origin` request header. | -                                |
+| allowMethods       | <em>(string \| !Array&lt;string&gt;)</em>                                                                                                                      | `Access-Control-Allow-Methods` header.                                                   | `GET,HEAD,PUT,POST,DELETE,PATCH` |
+| exposeHeaders      | <em>(string \| !Array&lt;string&gt;)</em>                                                                                                                      | `Access-Control-Expose-Headers` header.                                                  | -                                |
+| allowHeaders       | <em>(string \| !Array&lt;string&gt;)</em>                                                                                                                      | `Access-Control-Allow-Headers` header.                                                   | -                                |
+| maxAge             | <em>(string \| number)</em>                                                                                                                                    | `Access-Control-Max-Age` header in seconds.                                              | -                                |
+| credentials        | <em>boolean</em>                                                                                                                                               | `Access-Control-Max-Age` header in seconds.                                              | `false`                          |
+| keepHeadersOnError | <em>boolean</em>                                                                                                                                               | Add set headers to `err.header` if an error is thrown.                                   | `true`                           |
 
 There are 3 main use cases:
 
