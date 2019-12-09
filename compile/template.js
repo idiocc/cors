@@ -10,3 +10,7 @@ function cors(config) {
 module.exports = cors
 
 /* typal types/index.xml namespace */
+
+/**
+ * @typedef {import('@typedefs/goa').Middleware} _goa.Middleware
+ */

@@ -12,7 +12,7 @@ yarn add @goa/cors
 
 - [Table Of Contents](#table-of-contents)
 - [API](#api)
-- [`cors(config=: !CorsConfig): string`](#corsconfig-corsconfig-string)
+- [`cors(config=: !CorsConfig): !Middleware`](#corsconfig-corsconfig-middleware)
   * [`CorsConfig`](#type-corsconfig)
 - [Copyright & License](#copyright--license)
 
@@ -32,7 +32,7 @@ import cors from '@goa/cors'
   <img src="/.documentary/section-breaks/1.svg?sanitize=true">
 </a></p>
 
-## <code><ins>cors</ins>(</code><sub><br/>&nbsp;&nbsp;`config=: !CorsConfig,`<br/></sub><code>): <i>string</i></code>
+## <code><ins>cors</ins>(</code><sub><br/>&nbsp;&nbsp;`config=: !CorsConfig,`<br/></sub><code>): <i>!Middleware</i></code>
 Cross-Origin Resource Sharing (CORS) For Goa.
 
  - <kbd>config</kbd> <em><code><a href="#type-corsconfig" title="Options for the program.">!CorsConfig</a></code></em> (optional): The config.

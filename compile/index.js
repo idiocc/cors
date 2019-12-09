@@ -10,7 +10,7 @@ const { _cors } = require('./cors')
  * @param {string|number} [config.maxAge] `Access-Control-Max-Age` header in seconds.
  * @param {boolean} [config.credentials=false] `Access-Control-Max-Age` header in seconds. Default `false`.
  * @param {boolean} [config.keepHeadersOnError=true] Add set headers to `err.header` if an error is thrown. Default `true`.
- * @return {string}
+ * @return {!_goa.Middleware}
  */
 function cors(config) {
   return _cors(config)
@@ -30,4 +30,8 @@ module.exports = cors
  * @prop {string|number} [maxAge] `Access-Control-Max-Age` header in seconds.
  * @prop {boolean} [credentials=false] `Access-Control-Max-Age` header in seconds. Default `false`.
  * @prop {boolean} [keepHeadersOnError=true] Add set headers to `err.header` if an error is thrown. Default `true`.
+ */
+
+/**
+ * @typedef {import('@typedefs/goa').Middleware} _goa.Middleware
  */
