@@ -23,7 +23,8 @@
   "files": [
     "src",
     "compile",
-    "types/externs.js"
+    "types/externs.js",
+    "types/index.xml"
   ],
   "externs": "types/externs.js",
   "repository": {
