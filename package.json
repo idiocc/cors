@@ -1,6 +1,6 @@
 {
   "name": "@goa/cors",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Cross-Origin Resource Sharing (CORS) For Goa.",
   "main": "compile/index.js",
   "module": "src/index.js",
