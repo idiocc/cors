@@ -13,3 +13,5 @@ yarn add @goa/cors
 %TOC%
 
 %~%
+
+<include-typedefs>@typedefs/goa</include-typedefs>

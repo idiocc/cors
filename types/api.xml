@@ -1,5 +1,5 @@
 <types namespace="_goa">
-  <!-- <impor1t name="Middleware" from="_goa" link="https://github.com/idiocc/goa/wiki/Application#middlewarectx-_goacontextnext-function-promisevoid" desc="The function to handle requests which can be installed with the .use method." /> -->
+  <import from="@typedefs/goa" ns="_goa" name="Middleware" />
   <method name="cors" return="!_goa.Middleware">
     <arg type="!_goa.CorsConfig" name="config" opt>The config.</arg>
     Cross-Origin Resource Sharing (CORS) For Goa.

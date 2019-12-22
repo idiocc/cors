@@ -12,11 +12,11 @@ const { _cors } = require('./cors')
  * @param {boolean} [config.keepHeadersOnError=true] Add set headers to `err.header` if an error is thrown. Default `true`.
  * @return {!_goa.Middleware}
  */
-function cors(config) {
+function $cors(config) {
   return _cors(config)
 }
 
-module.exports = cors
+module.exports = $cors
 
 /* typal types/index.xml namespace */
 /**
@@ -32,6 +32,9 @@ module.exports = cors
  * @prop {boolean} [keepHeadersOnError=true] Add set headers to `err.header` if an error is thrown. Default `true`.
  */
 
+/* typal types/api.xml namespace */
 /**
  * @typedef {import('@typedefs/goa').Middleware} _goa.Middleware
+ * @typedef {_goa.cors} cors Cross-Origin Resource Sharing (CORS) For Goa.
+ * @typedef {(config?: !_goa.CorsConfig) => !_goa.Middleware} _goa.cors Cross-Origin Resource Sharing (CORS) For Goa.
  */

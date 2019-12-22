@@ -12,8 +12,7 @@
     "lib": "depack src/depack.js -o compile/cors.js -a -c --source_map_include_content --externs http",
     "test-compile": "ALAMODE_ENV=test-compile yarn test",
     "lint": "eslint .",
-    "doc": "NODE_DEBUG=doc doc -o README.md -n _goa",
-    "wiki": "NODE_DEBUG=doc doc documentary-wiki -W wiki -n _goa",
+    "doc": "doc -o README.md -n _goa -a -d",
     "d": "yarn-s template d1 externs",
     "d1": "typal compile/index.js -u -t types/index.xml",
     "template": "typal compile/template.js -T compile/index.js -t types/api.xml",
@@ -24,13 +23,15 @@
     "src",
     "compile",
     "types/externs.js",
-    "types/index.xml"
+    "types/index.xml",
+    "typedefs.json"
   ],
   "externs": "types/externs.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/idiocc/cors.git"
   },
+  "typedefs": "typedefs.json",
   "keywords": [
     "idio",
     "cors",
@@ -41,15 +42,15 @@
   "bugs": {
     "url": "https://github.com/idiocc/cors/issues"
   },
-  "homepage": "https://github.com/idiocc/cors#readme",
+  "homepage": "https://www.idio.cc",
   "devDependencies": {
-    "@externs/goa": "^0.1.1",
-    "@goa/koa": "^1.1.5",
+    "@externs/goa": "^1.0.1",
+    "@goa/koa": "^2.1.0",
     "@goa/vary": "^1.0.0",
-    "@typedefs/goa": "^0.0.6",
-    "alamode": "^3.2.0",
+    "@typedefs/goa": "^0.1.5",
+    "alamode": "^3.3.0",
     "depack": "^1.0.1",
-    "documentary": "^1.34.2",
+    "documentary": "^1.35.8",
     "erte": "^1.2.0",
     "eslint-config-artdeco": "1.0.1",
     "rqt": "^4.0.0",

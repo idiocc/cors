@@ -1,6 +1,6 @@
 <types namespace="_goa">
-  <import from="@typedefs/goa" ns="_goa" link="https://github.com/idiocc/goa/wiki/Context#type-_goacontext" name="Context" desc="The context object for each request." />
-  <type record name="CorsConfig" desc="Options for the program.">
+  <import from="@typedefs/goa" ns="_goa" name="Context" />
+  <record name="CorsConfig" desc="Options for the program.">
     <prop type="string|function(!_goa.Context)" name="origin" opt>
       `Access-Control-Allow-Origin` header, default is taken from the `Origin` request header.
     </prop>
@@ -22,5 +22,5 @@
     <prop boolean name="keepHeadersOnError" default="true">
       Add set headers to `err.header` if an error is thrown.
     </prop>
-  </type>
+  </record>
 </types>

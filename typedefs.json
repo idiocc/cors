@@ -1,0 +1,10 @@
+{
+  "_goa.cors": {
+    "link": "https://github.com/idiocc/cors#corsconfig-corsconfig-middleware",
+    "description": "Cross-Origin Resource Sharing (CORS) For Goa."
+  },
+  "_goa.CorsConfig": {
+    "link": "https://github.com/idiocc/cors#type-corsconfig",
+    "description": "Options for the program."
+  }
+}

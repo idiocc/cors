@@ -20,6 +20,7 @@ yarn add @goa/cors
   <img src="/.documentary/section-breaks/0.svg?sanitize=true">
 </a></p>
 
+
 ## API
 
 The package is available by importing its default function:
@@ -46,7 +47,7 @@ __<a name="type-corsconfig">`CorsConfig`</a>__: Options for the program.
  </tr></thead>
  <tr>
   <td rowSpan="3" align="center">origin</td>
-  <td><em>(string | function(<a href="https://github.com/idiocc/goa/wiki/Context#type-_goacontext" title="The context object for each request.">!Context</a>))</em></td>
+  <td><em>(string | function(<a href="https://github.com/idiocc/goa/wiki/Context#type-context" title="The context object for each request.">!Context</a>))</em></td>
   <td rowSpan="3">-</td>
  </tr>
  <tr></tr>
@@ -154,7 +155,7 @@ goa.listen(async function() {
   'access-control-allow-origin': 'www.example.com',
   'content-type': 'text/plain; charset=utf-8',
   'content-length': '9',
-  date: 'Sun, 08 Dec 2019 23:29:28 GMT',
+  date: 'Sun, 22 Dec 2019 06:19:49 GMT',
   connection: 'close' }
 ```
 
@@ -189,7 +190,7 @@ goa.listen(async function() {
   'access-control-allow-origin': 'www.hello-world.com',
   'content-type': 'text/plain; charset=utf-8',
   'content-length': '9',
-  date: 'Sun, 08 Dec 2019 23:29:27 GMT',
+  date: 'Sun, 22 Dec 2019 06:19:49 GMT',
   connection: 'close' }
 ```
 
@@ -230,7 +231,7 @@ goa.listen(async function() {
   'access-control-allow-credentials': 'true',
   'access-control-max-age': '1000',
   'access-control-allow-methods': 'POST,PUT',
-  date: 'Sun, 08 Dec 2019 23:29:28 GMT',
+  date: 'Sun, 22 Dec 2019 06:19:48 GMT',
   connection: 'close' }
 ```
 
@@ -245,10 +246,7 @@ Original Work by [dead-horse & contributors](https://github.com/koajs/cors) lice
 GNU Affero General Public License v3.0
 
 <table>
-  <tr>
-    <td><img src="https://avatars3.githubusercontent.com/u/38815725?v=4&amp;s=100" alt="idiocc"></td>
-    <td>© <a href="https://idio.cc">Idio</a> 2019</td>
-  </tr>
+  <tr><td><img src="https://avatars3.githubusercontent.com/u/40834161?s=100" alt="idiocc"></td><td>© <a href="https://www.idio.cc">Idio</a> 2019</td></tr>
 </table>
 
 <p align="center"><a href="#table-of-contents">

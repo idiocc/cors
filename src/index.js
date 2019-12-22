@@ -1,10 +1,9 @@
 import { append } from '@goa/vary'
 
 /**
- * Cross-Origin Resource Sharing (CORS) For Goa.
- * @param {!_goa.CorsConfig} [config] Options for the program.
+ * @type {_goa.cors}
  */
-export default function (config = {}) {
+function Cors(config = {}) {
   let {
     allowMethods = 'GET,HEAD,PUT,POST,DELETE,PATCH',
     exposeHeaders,
@@ -94,7 +93,7 @@ export default function (config = {}) {
       ctx.set('Access-Control-Allow-Origin', origin)
 
       if (credentials)
-        ctx.set('Access-Control-Allow-Credentials', true)
+        ctx.set('Access-Control-Allow-Credentials', 'true')
 
       if (maxAge)
         ctx.set('Access-Control-Max-Age', maxAge)
@@ -115,10 +114,11 @@ export default function (config = {}) {
   return cors
 }
 
+export default Cors
+
 /**
  * @typedef {import('../').CorsConfig} _goa.CorsConfig
  */
 /**
- * @suppress {nonStandardJsDocs}
- * @typedef {import('@typedefs/goa').Middleware} _goa.Middleware
+ * @typedef {import('../').cors} _goa.cors
  */
