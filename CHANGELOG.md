@@ -1,3 +1,10 @@
+## 22 December 2019
+
+### [1.1.0](https://github.com/idiocc/cors/compare/v1.0.2...v1.1.0)
+
+- [docs] Add `typedefs.json` file.
+- [fix] Set the header to a string value.
+
 ## 9 December 2019
 
 ### [1.0.2](https://github.com/idiocc/cors/compare/v1.0.1...v1.0.2)
