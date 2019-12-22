@@ -46,3 +46,10 @@ _goa.CorsConfig.prototype.credentials
  * @type {boolean|undefined}
  */
 _goa.CorsConfig.prototype.keepHeadersOnError
+
+/* typal types/api.xml externs */
+/**
+ * Cross-Origin Resource Sharing (CORS) For Goa.
+ * @typedef {function(!_goa.CorsConfig=): !_goa.Middleware}
+ */
+_goa.cors

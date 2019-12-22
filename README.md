@@ -241,9 +241,9 @@ goa.listen(async function() {
 
 ## Copyright & License
 
-Original Work by [dead-horse & contributors](https://github.com/koajs/cors) licensed under MIT.
-
 GNU Affero General Public License v3.0
+
+Original Work by [dead-horse & contributors](https://github.com/koajs/cors) licensed under MIT found in [COPYING](COPYING).
 
 <table>
   <tr><td><img src="https://avatars3.githubusercontent.com/u/40834161?s=100" alt="idiocc"></td><td>© <a href="https://www.idio.cc">Idio</a> 2019</td></tr>
