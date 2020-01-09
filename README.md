@@ -14,6 +14,7 @@ yarn add @goa/cors
 - [API](#api)
 - [`cors(config=: !CorsConfig): !Middleware`](#corsconfig-corsconfig-middleware)
   * [`CorsConfig`](#type-corsconfig)
+- [Usage Events](#usage-events)
 - [Copyright & License](#copyright--license)
 
 <p align="center"><a href="#table-of-contents">
@@ -155,7 +156,7 @@ goa.listen(async function() {
   'access-control-allow-origin': 'www.example.com',
   'content-type': 'text/plain; charset=utf-8',
   'content-length': '9',
-  date: 'Sun, 22 Dec 2019 06:19:49 GMT',
+  date: 'Thu, 09 Jan 2020 02:16:29 GMT',
   connection: 'close' }
 ```
 
@@ -190,7 +191,7 @@ goa.listen(async function() {
   'access-control-allow-origin': 'www.hello-world.com',
   'content-type': 'text/plain; charset=utf-8',
   'content-length': '9',
-  date: 'Sun, 22 Dec 2019 06:19:49 GMT',
+  date: 'Thu, 09 Jan 2020 02:16:29 GMT',
   connection: 'close' }
 ```
 
@@ -231,7 +232,7 @@ goa.listen(async function() {
   'access-control-allow-credentials': 'true',
   'access-control-max-age': '1000',
   'access-control-allow-methods': 'POST,PUT',
-  date: 'Sun, 22 Dec 2019 06:19:48 GMT',
+  date: 'Thu, 09 Jan 2020 02:16:29 GMT',
   connection: 'close' }
 ```
 
@@ -239,14 +240,31 @@ goa.listen(async function() {
   <img src="/.documentary/section-breaks/2.svg?sanitize=true">
 </a></p>
 
+## Usage Events
+
+This middleware integrates with Idio that collects middleware usage statistics to reward package maintainers. It will emit certain events to bill its usage:
+
+1. `headers`: When setting the headers if origin was present.
+1. `options`: When responding to pre-flight requests via the `OPTIONS` http method.
+
+In future, more fine-grained usage events might appear.
+
+<p align="center"><a href="#table-of-contents">
+  <img src="/.documentary/section-breaks/3.svg?sanitize=true">
+</a></p>
+
 ## Copyright & License
 
 GNU Affero General Public License v3.0
 
+Affero GPL means that you're not allowed to use this middleware on the web unless you release the source code for your application. This is a restrictive license which has the purpose of defending Open Source work and its creators.
+
+Please refer to the [Idio license agreement](https://github.com/idiocc/idio#copyright--license) for more info on dual-licensing. You're allowed to use this middleware without disclosing the source code if you sign up on [neoluddite.dev](https://neoluddite.dev) package reward scheme.
+
 Original Work by [dead-horse & contributors](https://github.com/koajs/cors) licensed under MIT found in [COPYING](COPYING).
 
 <table>
-  <tr><td><img src="https://avatars3.githubusercontent.com/u/40834161?s=100" alt="idiocc"></td><td>© <a href="https://www.idio.cc">Idio</a> 2019</td></tr>
+  <tr><td><img src="https://avatars3.githubusercontent.com/u/40834161?s=100" alt="idiocc"></td><td>© <a href="https://www.idio.cc">Idio</a> 2020</td></tr>
 </table>
 
 <p align="center"><a href="#table-of-contents">
