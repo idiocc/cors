@@ -4,12 +4,12 @@
 
 ## Usage Events
 
-This middleware integrates with Idio that collects middleware usage statistics to reward package maintainers. It will emit certain events to bill its usage:
+This middleware integrates with [_Idio_](https://github.com/idiocc/idio) that collects middleware usage statistics to reward package maintainers. It will emit certain events to bill its usage:
 
 1. `headers`: When setting the headers if origin was present.
 1. `options`: When responding to pre-flight requests via the `OPTIONS` http method.
 
-In future, more fine-grained usage events might appear.
+The usage is recorded via the `ctx.neoluddite` context property set by a server such as _Idio_. In future, more fine-grained usage events might appear.
 
 %~%
 

@@ -65,7 +65,7 @@ function Cors(config = {}) {
       if (exposeHeaders)
         set('Access-Control-Expose-Headers', exposeHeaders)
 
-      ctx.app.emit('use', '@goa/cors', 'headers')
+      if (ctx['neoluddite']) ctx['neoluddite']('@goa/cors', 'headers')
 
       if (!keepHeadersOnError) {
         return await next()
@@ -91,7 +91,7 @@ function Cors(config = {}) {
         // this not preflight request, ignore it
         return await next()
       }
-      ctx.app.emit('use', '@goa/cors', 'options')
+      if (ctx['neoluddite']) ctx['neoluddite']('@goa/cors', 'options')
 
       ctx.set('Access-Control-Allow-Origin', origin)
 

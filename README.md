@@ -156,7 +156,7 @@ goa.listen(async function() {
   'access-control-allow-origin': 'www.example.com',
   'content-type': 'text/plain; charset=utf-8',
   'content-length': '9',
-  date: 'Thu, 09 Jan 2020 02:16:29 GMT',
+  date: 'Thu, 09 Jan 2020 14:43:05 GMT',
   connection: 'close' }
 ```
 
@@ -191,7 +191,7 @@ goa.listen(async function() {
   'access-control-allow-origin': 'www.hello-world.com',
   'content-type': 'text/plain; charset=utf-8',
   'content-length': '9',
-  date: 'Thu, 09 Jan 2020 02:16:29 GMT',
+  date: 'Thu, 09 Jan 2020 14:43:05 GMT',
   connection: 'close' }
 ```
 
@@ -232,7 +232,7 @@ goa.listen(async function() {
   'access-control-allow-credentials': 'true',
   'access-control-max-age': '1000',
   'access-control-allow-methods': 'POST,PUT',
-  date: 'Thu, 09 Jan 2020 02:16:29 GMT',
+  date: 'Thu, 09 Jan 2020 14:43:05 GMT',
   connection: 'close' }
 ```
 
@@ -242,12 +242,12 @@ goa.listen(async function() {
 
 ## Usage Events
 
-This middleware integrates with Idio that collects middleware usage statistics to reward package maintainers. It will emit certain events to bill its usage:
+This middleware integrates with [_Idio_](https://github.com/idiocc/idio) that collects middleware usage statistics to reward package maintainers. It will emit certain events to bill its usage:
 
 1. `headers`: When setting the headers if origin was present.
 1. `options`: When responding to pre-flight requests via the `OPTIONS` http method.
 
-In future, more fine-grained usage events might appear.
+The usage is recorded via the `ctx.neoluddite` context property set by a server such as _Idio_. In future, more fine-grained usage events might appear.
 
 <p align="center"><a href="#table-of-contents">
   <img src="/.documentary/section-breaks/3.svg?sanitize=true">

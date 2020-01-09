@@ -1,5 +1,9 @@
 ## 9 January 2020
 
+### [1.2.1](https://github.com/idiocc/cors/compare/v1.2.0...v1.2.1)
+
+- [fix] Record usage via context.
+
 ### [1.2.0](https://github.com/idiocc/cors/compare/v1.1.0...v1.2.0)
 
 - [license] Add usage events.

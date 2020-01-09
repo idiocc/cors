@@ -41,32 +41,36 @@ const T = {
 }
 
 /** @type {TestSuite} */
-export const events = {
+export const usage = {
   context: Context,
-  async'emits options'({ startPlain, app, origin }) {
-    app.use(cors())
-    const p = new Promise((r) => {
-      app.on('use', (pck, item) => {
-        r({ package: pck, item })
-      })
+  async'records options'({ startPlain, app, origin }) {
+    app.use(async (ctx, next) => {
+      ctx.neoluddite = (p, item) => {
+        usage.push({ package: p, item })
+      }
+      await next()
     })
+    app.use(cors())
+    let usage = []
     await startPlain(app.callback())
       .set('Origin', origin)
       .set('Access-Control-Request-Method', 'GET')
       .options('/')
-    return await p
+    return usage
   },
-  async'emits headers'({ startPlain, app, origin }) {
-    app.use(cors())
-    const p = new Promise((r) => {
-      app.on('use', (pck, item) => {
-        r({ package: pck, item })
-      })
+  async'records headers'({ startPlain, app, origin }) {
+    app.use(async (ctx, next) => {
+      ctx.neoluddite = (p, item) => {
+        usage.push({ package: p, item })
+      }
+      await next()
     })
+    app.use(cors())
+    let usage = []
     await startPlain(app.callback())
       .set('Origin', origin)
       .get('/')
-    return await p
+    return usage
   },
 }
 
