@@ -1,3 +1,10 @@
+## 9 January 2020
+
+### [1.2.0](https://github.com/idiocc/cors/compare/v1.1.0...v1.2.0)
+
+- [license] Add usage events.
+- [test] Write tests.
+
 ## 22 December 2019
 
 ### [1.1.0](https://github.com/idiocc/cors/compare/v1.0.2...v1.1.0)
