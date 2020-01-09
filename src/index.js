@@ -40,7 +40,7 @@ function Cors(config = {}) {
     if (!requestOrigin) return await next()
 
     let origin
-    if (typeof Origin === 'function') {
+    if (typeof Origin == 'function') {
       origin = Origin(ctx)
       if (origin instanceof Promise) origin = await origin
       if (!origin) return await next()
@@ -64,6 +64,8 @@ function Cors(config = {}) {
 
       if (exposeHeaders)
         set('Access-Control-Expose-Headers', exposeHeaders)
+
+      ctx.app.emit('use', '@goa/cors', 'headers')
 
       if (!keepHeadersOnError) {
         return await next()
@@ -89,6 +91,7 @@ function Cors(config = {}) {
         // this not preflight request, ignore it
         return await next()
       }
+      ctx.app.emit('use', '@goa/cors', 'options')
 
       ctx.set('Access-Control-Allow-Origin', origin)
 
@@ -121,4 +124,7 @@ export default Cors
  */
 /**
  * @typedef {import('../').cors} _goa.cors
+ */
+/**
+ * @typedef {import('@typedefs/goa').Middleware} _goa.Middleware
  */
